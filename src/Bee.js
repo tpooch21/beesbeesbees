@@ -13,7 +13,7 @@
 // Methods
 // Eat: same as Grub, will delegate to Grub constructor prototype
 
-import { Grub } from './Grub';
+// Import Grub constructor from Grub.js so that Bee can delegate to it
 
 var Bee = function() {
   Grub.call(this);
@@ -27,4 +27,5 @@ Bee.prototype = Object.create(Grub.prototype);
 
 // Should have a prototype constructor property that points back to the constructor itself
 Bee.prototype.constructor = Bee;
+
 
